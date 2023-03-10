@@ -13,9 +13,30 @@ namespace WinFormsApp10
 {
     public partial class FrmUsuarioDepartamento : Form
     {
+        string stringConexao = "" +
+      "data source=localhost;" +
+      "initial Catalog= ProjetoIntegradorT_13;" +
+      "User ID=sa;" +
+      "password=123456";
 
-           
-public FrmUsuarioDepartamento()
+
+        private void testarConexao()
+        {
+            SqlConnection conn = new SqlConnection(stringConexao);
+
+            try
+            {
+                conn.Open();
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro:" + ex.ToString());
+                Application.Exit();
+            }
+        }
+
+        public FrmUsuarioDepartamento()
         {
             InitializeComponent();
         }
@@ -47,7 +68,8 @@ public FrmUsuarioDepartamento()
 
         private void btoSair_Click(object sender, EventArgs e)
         {
-            this.Close();   
+            Application.Exit();
+            //this.Close();   
         }
 
         private void btoLimpar_Click(object sender, EventArgs e)
@@ -79,25 +101,25 @@ public FrmUsuarioDepartamento()
         {
             string sql = "update Parceiro set" +
 
-            1  " nome_Parceiro= '" + txtNome.Text + "'," +
-             2 " Cnpj_Parceiro='" + mtbCnpj.Text + "'," +
-              3" Status_Parceiro='" + cboStatus.SelectedIndex + "'," +
-              4" Logradouro_Parceiro='" + txtLogradouro.Text + "'" +              
-              5" Numero_Parceiro= '" + txtNumero.Text + "'," +
-              6" Complemento_Parceiro='" + txtComplemento.Text + "'," +
-              7" Bairro_Parceiro='" + txtBairro.Text + "'," +
-              8" Cep_Parceiro='" + mtbCep.Text + "'," +
-              9" Cidade_Parceiro= '" + txtCidade.Text + "'," +
-              10" UF_Parceiro='" + cboUF.SelectedIndex + "'," +
-              11" Telefone1_Parceiro='" + mtbTelefone1.Text + "'," +
-              12" Telefone2_Parceiro='" + mtbTelefone2.Text + "'," +
-              13" Email_Parceiro= '" + txtEmail.Text + "'," +
-              14" HorarioFuncionamento_Parceiro='" + mtbHorario.Text + "'," +
-              15" TipoServico_Parceiro='" + txtTipoServico.Text + "'," +
-              16" Especialidade_Parceiro='" + cboEspecialidade.SelectedItem + "'," +
-              17" Login_Parceiro=" + txtLogin.Text + "'," +
-              18 "Senha_Parceiro= '" + txtSenha.Text + "'," +
-              19" Observacao_Parceiro='" + txtObservacao.Text + "'," +
+              " nome_Parceiro= '" + txtNome.Text + "'," +
+              " Cnpj_Parceiro='" + mtbCnpj.Text + "'," +
+              " Status_Parceiro='" + cboStatus.SelectedIndex + "'," +
+              " Logradouro_Parceiro='" + txtLogradouro.Text + "'" +              
+              " Numero_Parceiro= '" + txtNumero.Text + "'," +
+              " Complemento_Parceiro='" + txtComplemento.Text + "'," +
+              " Bairro_Parceiro='" + txtBairro.Text + "'," +
+              " Cep_Parceiro='" + mtbCep.Text + "'," +
+              " Cidade_Parceiro= '" + txtCidade.Text + "'," +
+              " UF_Parceiro='" + cboUF.SelectedIndex + "'," +
+              " Telefone1_Parceiro='" + mtbTelefone1.Text + "'," +
+              " Telefone2_Parceiro='" + mtbTelefone2.Text + "'," +
+              " Email_Parceiro= '" + txtEmail.Text + "'," +
+              " HorarioFuncionamento_Parceiro='" + mtbHorario.Text + "'," +
+              " TipoServico_Parceiro='" + txtTipoServico.Text + "'," +
+              " Especialidade_Parceiro='" + cboEspecialidade.SelectedItem + "'," +
+              " Login_Parceiro=" + txtLogin.Text + "'," +
+              "Senha_Parceiro= '" + txtSenha.Text + "'," +
+              " Observacao_Parceiro='" + txtObservacao.Text + "'," +
               " where id_Parceiro=" + txtID.Text;
 
             SqlConnection conexao = new SqlConnection(stringConexao);
