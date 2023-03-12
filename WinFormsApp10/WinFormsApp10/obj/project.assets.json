@@ -476,11 +476,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\welli\\Source\\Repos\\Wcarb0ne\\Categoria\\WinFormsApp10\\WinFormsApp10\\WinFormsApp10.csproj",
+      "projectUniqueName": "C:\\Users\\welli\\source\\repos\\Wcarb0ne\\Categoria\\WinFormsApp10\\WinFormsApp10\\WinFormsApp10.csproj",
       "projectName": "WinFormsApp10",
-      "projectPath": "C:\\Users\\welli\\Source\\Repos\\Wcarb0ne\\Categoria\\WinFormsApp10\\WinFormsApp10\\WinFormsApp10.csproj",
+      "projectPath": "C:\\Users\\welli\\source\\repos\\Wcarb0ne\\Categoria\\WinFormsApp10\\WinFormsApp10\\WinFormsApp10.csproj",
       "packagesPath": "C:\\Users\\welli\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\welli\\Source\\Repos\\Wcarb0ne\\Categoria\\WinFormsApp10\\WinFormsApp10\\obj\\",
+      "outputPath": "C:\\Users\\welli\\source\\repos\\Wcarb0ne\\Categoria\\WinFormsApp10\\WinFormsApp10\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -538,7 +538,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

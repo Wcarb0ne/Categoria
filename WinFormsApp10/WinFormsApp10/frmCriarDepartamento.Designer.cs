@@ -82,6 +82,7 @@
             txtCodigo.Name = "txtCodigo";
             txtCodigo.Size = new Size(100, 29);
             txtCodigo.TabIndex = 3;
+            txtCodigo.TextChanged += txtCodigo_TextChanged;
             // 
             // label4
             // 
@@ -110,6 +111,7 @@
             btoPesquisar.TabIndex = 0;
             btoPesquisar.Text = "&Pesquisar";
             btoPesquisar.UseVisualStyleBackColor = true;
+            btoPesquisar.Click += btoPesquisar_Click;
             // 
             // groupBox2
             // 
@@ -150,7 +152,7 @@
             // 
             cboStatus.DropDownStyle = ComboBoxStyle.DropDownList;
             cboStatus.FormattingEnabled = true;
-            cboStatus.Items.AddRange(new object[] { "Ativo", "Desativado", "Inexistente" });
+            cboStatus.Items.AddRange(new object[] { "Ativo", "Desativado" });
             cboStatus.Location = new Point(520, 38);
             cboStatus.Name = "cboStatus";
             cboStatus.Size = new Size(147, 29);
@@ -163,6 +165,7 @@
             txtObs.Name = "txtObs";
             txtObs.Size = new Size(655, 58);
             txtObs.TabIndex = 4;
+            txtObs.TabStop = false;
             // 
             // txtDescricao
             // 
@@ -171,6 +174,7 @@
             txtDescricao.Name = "txtDescricao";
             txtDescricao.Size = new Size(656, 58);
             txtDescricao.TabIndex = 3;
+            txtDescricao.TabStop = false;
             // 
             // txtNomeDepartamento
             // 
@@ -218,6 +222,7 @@
             btoCadastrar.TabIndex = 4;
             btoCadastrar.Text = "&Cadastrar";
             btoCadastrar.UseVisualStyleBackColor = true;
+            btoCadastrar.Click += btoCadastrar_Click;
             // 
             // btoSair
             // 
@@ -247,6 +252,7 @@
             btoExcluir.TabIndex = 1;
             btoExcluir.Text = "&Excluir";
             btoExcluir.UseVisualStyleBackColor = true;
+            btoExcluir.Click += btoExcluir_Click;
             // 
             // btoAlterar
             // 
@@ -270,6 +276,7 @@
             Margin = new Padding(4);
             Name = "frmCriarDepartamento";
             Text = "Tela de Cadastro de Departamantos";
+            Load += frmCriarDepartamento_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
